@@ -1,0 +1,5 @@
+Array.prototype.concatMap = function(projection) {
+  return this.map(function(index) {
+    return projection(index);
+  }).concatAll();
+}

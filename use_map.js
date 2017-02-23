@@ -31,11 +31,9 @@ var newReleases = [
 			"rating": [5.0],
 			"bookmark": [{ id: 432534, time: 65876586 }]
 		}
-	],
-	videoAndTitlePairs = [];
+	];
 
-  newReleases.forEach(function(video) {
-  	videoAndTitlePairs.push({ id: video.id, title: video.title });
-  });
-
-console.log(videoAndTitlePairs);
+var result = newReleases.map(function(movie) {
+  return { id: movie.id, title: movie.title }
+});
+console.log(result);

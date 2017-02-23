@@ -1,0 +1,9 @@
+Array.prototype.map = function(callback) {
+  var results = [];
+
+  this.forEach(function(value) {
+    results.push(callback(value));
+  });
+
+  return results;
+};
